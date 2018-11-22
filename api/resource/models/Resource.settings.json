@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "resource",
+  "info": {
+    "name": "resource",
+    "description": "Resources"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Marketing Material",
+        "Technical Specifications",
+        "Design Guides",
+        "Instruction Manuals",
+        "Video / Media",
+        "Case Studies"
+      ]
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "product": {
+      "model": "product",
+      "via": "resources"
+    }
+  }
+}

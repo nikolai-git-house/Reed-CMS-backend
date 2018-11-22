@@ -1,0 +1,87 @@
+{
+  "connection": "default",
+  "collectionName": "order",
+  "info": {
+    "name": "order",
+    "description": "Shop orders"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "invoiceNumber": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "beforeTax": {
+      "type": "decimal"
+    },
+    "tax": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "status": {
+      "default": "new",
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "paid",
+        "verified",
+        "onDelivery",
+        "sent",
+        "received"
+      ]
+    },
+    "ordereditems": {
+      "collection": "ordereditem",
+      "via": "order"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "transactionId": {
+      "type": "string"
+    },
+    "accountId": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "accountType": {
+      "type": "enumeration",
+      "enum": [
+        "regular",
+        "distributor"
+      ]
+    }
+  }
+}

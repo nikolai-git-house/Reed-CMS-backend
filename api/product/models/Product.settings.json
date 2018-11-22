@@ -1,0 +1,82 @@
+{
+  "connection": "default",
+  "collectionName": "product",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "hardware",
+        "plumbing",
+        "accessories"
+      ]
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "variants": {
+      "collection": "variant",
+      "dominant": true,
+      "via": "products"
+    },
+    "orderedItems": {
+      "collection": "ordereditem",
+      "via": "product"
+    },
+    "resources": {
+      "collection": "resource",
+      "via": "product"
+    },
+    "highlights": {
+      "type": "text"
+    },
+    "communication": {
+      "type": "text"
+    },
+    "systemRequirements": {
+      "type": "text"
+    },
+    "general": {
+      "type": "text"
+    },
+    "workingConditions": {
+      "type": "text"
+    },
+    "systemLocation": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "dimensions": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "productInBoxes": {
+      "collection": "productinbox",
+      "via": "product"
+    },
+    "productInfo": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

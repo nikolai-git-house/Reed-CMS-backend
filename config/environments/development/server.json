@@ -1,0 +1,10 @@
+{
+  "host": "${process.env.HOST || 'localhost'}",
+  "port": 1337,
+  "autoReload": {
+    "enabled": true
+  },
+  "cron": {
+    "enabled": false
+  }
+}

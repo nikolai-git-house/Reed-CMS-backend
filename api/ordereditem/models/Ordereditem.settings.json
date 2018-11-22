@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "ordereditems",
+  "info": {
+    "name": "ordereditem",
+    "description": "denormalized products"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "product": {
+      "model": "product",
+      "via": "orderedItems"
+    },
+    "variant": {
+      "collection": "variant",
+      "dominant": true,
+      "via": "orderedItems"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "order": {
+      "model": "order",
+      "via": "ordereditems"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "productImage": {
+      "type": "string"
+    },
+    "variantName": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}

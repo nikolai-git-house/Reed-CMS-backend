@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "productinbox",
+    "description": "details about box content on products"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "product": {
+      "model": "product",
+      "via": "productInBoxes"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

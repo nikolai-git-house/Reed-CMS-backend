@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/productinbox",
+      "handler": "Productinbox.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/productinbox/count",
+      "handler": "Productinbox.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/productinbox/:_id",
+      "handler": "Productinbox.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/productinbox",
+      "handler": "Productinbox.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/productinbox/:_id",
+      "handler": "Productinbox.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/productinbox/:_id",
+      "handler": "Productinbox.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

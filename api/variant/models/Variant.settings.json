@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "variant",
+  "info": {
+    "name": "variant",
+    "description": "Product Variant (different sizes with different prices)"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    },
+    "products": {
+      "collection": "product",
+      "via": "variants"
+    },
+    "orderedItems": {
+      "collection": "ordereditem",
+      "via": "variant"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "size",
+        "color"
+      ],
+      "required": true
+    }
+  }
+}

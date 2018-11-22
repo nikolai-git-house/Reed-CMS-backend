@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ordereditem",
+      "handler": "Ordereditem.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordereditem/count",
+      "handler": "Ordereditem.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordereditem/:_id",
+      "handler": "Ordereditem.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ordereditem",
+      "handler": "Ordereditem.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ordereditem/:_id",
+      "handler": "Ordereditem.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ordereditem/:_id",
+      "handler": "Ordereditem.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
